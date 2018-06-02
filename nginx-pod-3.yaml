@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-3
+  namespace: default
+  labels:
+    webserver: nginx
+    number: "3"
+    type: idle
+  annotations:
+    build-date: 2018-05-28
+spec:
+  containers:
+  - image: nginx:latest
+    name: nginx
+    ports:
+      - containerPort: 80
+        protocol: TCP
+    resources:
+      requests:
+        memory: "164Mi"
+        cpu: "200m"
+      limits:
+        memory: "256Mi"
+        cpu: "400m"
+  # - image: nginx:latest
+  #   name: nginx2
+  #   resources:
+  #     requests:
+  #       memory: "164Mi"
+  #       cpu: "200m"
+  #     limits:
+  #       memory: "256Mi"
+  #       cpu: "400m"
+
+# nginx html 目录
+#/usr/share/nginx/html/50x.html
+#/usr/share/nginx/html/index.html

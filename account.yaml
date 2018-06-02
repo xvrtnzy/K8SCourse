@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: account
+data:
+  username: d2FkZQ==
+  account: eHZydG56eTk0NTY=
